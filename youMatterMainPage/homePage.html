@@ -1,0 +1,79 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Wiring for JQuery, Materialize and JS -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      <!-- Compiled and minified CSS -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <!-- Compiled and minified JavaScript -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--CSS to manually fix how some elements are structured-->
+      <link rel="stylesheet" type="text/css" href="mystyles.css">      
+    </head>
+
+    <body>
+      	<h1 class="center-align">YouMatter</h1>
+    <!-- Dropdown Structure -->
+    <!-- Change '#!' to desired link for webpage wiring -->
+      <ul id="dropdown1" class="dropdown-content">
+        <li><a href="#!">Discussion Forum</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Talk to Someone</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Contact Us</a></li>
+      </ul>
+      <nav>
+        <div class="nav-wrapper">
+          <ul class="left ">
+            <!-- Dropdown Trigger, used to setup dropdown functionality -->
+            <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Menu</a></li>
+          </ul>
+        </div>
+      </nav>
+        <!--Image -->
+        <div class="center-align" >
+          <img id="collage" name="slide" height="400" width="600">
+        </div>
+
+        <h4 class="center-align">Recent Stories</h2>
+
+          
+
+
+
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+         <!--script for dropdown functionality -->
+        <script>
+         $(".dropdown-trigger").dropdown();
+        </script>
+        <!--Script to do a slideshow of images -->
+        <script>
+          var i = 0;
+          var images = [];
+          var time = 3000;
+
+          images[0] = "duo.jpg";
+          images[1] = "waves.jpg";
+          images[2] = "paradise.jpg";
+
+          function slideImage(){
+            
+            document.slide.src = images[i];
+
+            if(i < images.length- 1){
+              i++;
+            } else{
+              i = 0;
+            }
+
+            setTimeout("slideImage()", time);
+          }
+
+          window.onload = slideImage;
+        </script>
+    </body>
+  </html>

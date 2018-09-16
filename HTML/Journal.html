@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<title>Journal: Express yourself</title>
+		
+		<style> 
+			
+			#writeStory{
+				width: 60em;
+				height: 10em;	
+			}
+
+
+		</style>
+	</head>
+	<body>
+		<h1>Journal</h1>
+		<br>
+		<p>Get it off your chest! Express your inner most feelings 
+		<b>anonymously</b> and <b>freely</b>.</p>
+		
+		<button id = "postAStory" onclick = "writeStory()"> Post a
+			Story </button>
+
+		<br><hr><br>
+
+		<textarea id = "writeStory"  name = 
+		"Story" form = "anonymousStory"></textarea>
+		<br>		
+		<button id = "submitStory"> Post </button>
+
+		<script>
+
+			document.getElementById("writeStory").style.
+			        visibility = "hidden";
+			document.getElementById("submitStory").style.
+			        visibility = "hidden";
+
+                </script>
+
+		<script>
+		function writeStory() {
+			document.getElementById("postAStory").style.
+				visibility = "hidden";
+			document.getElementById("writeStory").style.
+				visibility = "visible";
+			document.getElementById("submitStory").style.
+				visibility = "visible";
+		}
+		</script>
+	</body>
+	
+</html>

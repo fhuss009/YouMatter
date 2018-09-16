@@ -1,0 +1,42 @@
+#collage{
+	position: relative;
+	top: 25px;
+}
+#root{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+#navbars{
+	background-color: #45b3e0;
+}
+#cert{
+	bottom:350px;
+	right: -20px;
+}
+#about{
+	bottom:280px;
+	right: 285px;
+}
+#stigma{
+	bottom:210px;
+	right: 588px;
+}
+#location{
+	bottom:140px;
+	right: 892px;
+}
+#more{
+	bottom:110px;
+	right: -20px;
+}
+.quote{
+	margin-left: 950px;
+	position: relative;
+	bottom: 459px;
+	width: 600px;
+
+}
+.b1{
+	width: 300px;
+	background-color: #87ceeb;
+}
